@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.trans {
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    transform: matrix(245deg);
+}
+
+.scale {
+    height: 50px;
+    width: 50px;
+    margin-top: 30px;
+    background-color: plum;
+    /* transform: scale(4); */
+}
+
+.scale:hover {
+    transform: scale(3);
+    cursor: pointer;
+}
+
+.transition {
+width: 70px;
+height: 70px;
+margin-top: 30px;
+border: 2px solid greenyellow;
+transition: width 5s;
+transition-delay: 2s;
+}
+
+.transition:hover {
+    width: 90px;
+}
+
+.key {
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+    border: 3px dashed brown;
+    animation: example 2s;
+    animation-iteration-count: 3;
+}
+
+@keyframes example {
+    0%{background-color: green;}
+    25%{background-color: yellowgreen;}
+    45%{background-color: thistle;}
+    100%{background-color:yellow ;}
+}
