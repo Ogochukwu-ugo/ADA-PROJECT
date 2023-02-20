@@ -13,6 +13,16 @@
     margin-bottom: 10px;
 }
 
+.description {
+    list-style: none;
+    font-size: 12px;
+}
+
+li {
+    
+    margin: auto ;
+}
+
 .profileBtn {
     padding: 10px;
     outline: none;

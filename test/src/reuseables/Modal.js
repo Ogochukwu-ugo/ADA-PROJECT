@@ -1,51 +1,34 @@
-// import { useState, useRef } from "react";
-// import Card from "./card";
+import React from 'react'
 
 
-// const Modal = ({name, profilePics, description, id}) =>{
-//     const [isOpen, setIsOpen] = useState(false);
-//     const modalRef = useRef(null);
+const Modal = ({name, profilePics, description, id}) =>{
+  return (
+    <div>
+      <button className="profileBtn" data-bs-target={`#detail${id}`} data-bs-toggle="modal"  >Click to view profile</button>
+        <div id={`detail${id}`} className="modal">
+                  <div className="modal-dialog">
+                    <div className="modal-content">
+                        
+                        <div className="modal-body">
+                            <div>
+                                <img className="img-responsive profilePics" 
+                                src={profilePics} 
+                                alt='profile pics' />
+                            </div>
+                            <div className="descr"> 
+                                <p className="name"> {name}</p>
+                                <ul className="description"> 
+                                  <li>{description[0]}</li>
+                                  <li>{description[1]}</li>
+                                  <li>{description[2]}</li>
+                                </ul>
+                            </div>
+                        </div>
+                  </div>
+                  </div>
+                </div>
+    </div>
+  )
+}
 
-//     const  openModal =() => {
-//         setIsOpen(true);
-//         const modal = new Modal(modalRef.current);
-//         modal.show();
-//     };
-
-//     const closeModal = () => {
-//         setIsOpen(false);
-//         const modal = new Modal(modalRef.current);
-//         modal.hide();
-//     };
-
-//     return (
-//         <>
-//         <div className="modal" tabIndex="-1" ref={modalRef}>
-//             <div className="modal-dialog">
-//                 <div className="modal-content">
-//                     <div className="modal-header">
-//                         <button type="button" className="btn-close" onClick={closeModal}></button>
-//                     </div>
-//                     <div className="modal-body">
-//                         <div>
-//                             <img className="img-responsive profilePics" 
-//                             src={profilePics} 
-//                             alt='profile pics' />
-//                         </div>
-//                         <div className="descr"> 
-//                             <p className="name"> {name}</p>
-//                             <p className="description"> {description}</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//         <Card openModal={openModal}/>
-//         </>
-//     )
-
-// };
-
-// export default Modal
-
-
+export default Modal
