@@ -31,7 +31,8 @@
     margin-top: 20px;
 }
 
-.head-title h1 {
+.head-title h1,
+.js {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
     font-style: italic;
